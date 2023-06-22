@@ -14,7 +14,7 @@ jobs:
           submodules: recursive
 
       - name: Build GDS
-        uses: TinyTapeout/tt-gds-action@tt04
+        uses: algofoogle/tt-gds-action@little-png # Test Anton's PR for PNG improvements.
 
   viewer:
     needs: gds
