@@ -16,9 +16,9 @@ module tt_um_algofoogle_test(
     input   wire        rst_n       // Active low reset
 );
 
-    reg [63:0] counter;
+    reg [255:0] counter;
 
-    assign uo_out = { counter[63:60], counter[3:0] };
+    assign uo_out = { counter[255:252], counter[3:0] };
 
     assign uio_oe = 0;
 
