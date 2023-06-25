@@ -12,7 +12,7 @@ set script_dir [file dirname [file normalize [info script]]]
 source $::env(DESIGN_DIR)/user_config.tcl
 
 # save some time
-set ::env(RUN_KLAYOUT_XOR) 0
+set ::env(RUN_KLAYOUT_XOR) 1
 set ::env(RUN_KLAYOUT_DRC) 0
 
 # don't put clock buffers on the outputs
@@ -22,10 +22,8 @@ set ::env(PL_RESIZER_BUFFER_OUTPUT_PORTS) 0
 set ::env(SYNTH_READ_BLACKBOX_LIB) 1
 
 # reduce wasted space
-set ::env(TOP_MARGIN_MULT) 1
-set ::env(BOTTOM_MARGIN_MULT) 1
-set ::env(LEFT_MARGIN_MULT) 6
-set ::env(RIGHT_MARGIN_MULT) 6
+set ::env(TOP_MARGIN_MULT) 2
+set ::env(BOTTOM_MARGIN_MULT) 2
 
 # absolute die size
 set ::env(FP_SIZING) absolute
@@ -57,3 +55,9 @@ set ::env(CLOCK_PORT) {clk}
 # don't use power rings or met5
 set ::env(DESIGN_IS_CORE) 0
 set ::env(RT_MAX_LAYER) {met4}
+
+# connect to first digital rails
+set ::env(VDD_NETS) [list {vccd1}]
+set ::env(GND_NETS) [list {vssd1}]
+
+set ::env(PL_TARGET_DENSITY) 0.35

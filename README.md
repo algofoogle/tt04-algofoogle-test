@@ -1,5 +1,9 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/wokwi_test/badge.svg)
 
+# AS1802 TEST for little-png2
+
+This is a copy of https://github.com/89Mods/tt3p5-as1802/ which has just been used for testing PNG rendering of the GDS.
+
 # What is Tiny Tapeout?
 
 TinyTapeout is an educational project that aims to make it easier and cheaper than ever to get your digital designs manufactured on a real chip!
